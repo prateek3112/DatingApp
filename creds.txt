@@ -1,0 +1,27 @@
+samriddhi.srivastava@xceedance.com
+
+Welcome@123
+
+
+Blog Page :
+Technology used - MongoDB and Nodejs
+It is a social media app where people can create their profiles
+and write about things they would like to share. Google oauth
+is also integrated to ensure smooth login facility.
+People can like and comment on each other's posts as well.
+Email marketing tool :
+I created a Newsletter Signup form with Nodejs. Using this all
+the user data gets collected to a list which is on MailChimp
+server.This list contains all the users subscribed to our
+Newsletter and we can email them all at once.
+Weather App :
+This web app is entirely made with Nodejs.
+It enables the user to see weather of any country or city in the
+world.
+Music player :
+Recently made a music player app with React.
+It has all the basic functionalities of a music player.
+Employee Register :
+Tech Stack - MEAN Stack
+It's a app which can be used to store information about of employees such as there name, department, role, salary joining date etc.
+It uses Mongo Db as database, Node Js as backend and Angular for Frontend.

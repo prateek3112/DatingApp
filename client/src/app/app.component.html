@@ -1,0 +1,20 @@
+
+<div class="container" style="display: table;padding:5px;">
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table" style="margin:5px;">
+        <tr class="thead-dark text-center">
+          <th>Id</th>
+          <th>Name</th>
+          <th>PasswordHash</th>
+          <th>PasswordSalt</th>
+
+        </tr>
+        <tr *ngFor="let item of users" class="text-center">
+          
+          <td *ngFor="let user of item | keyvalue : originalOrder" class="col-2" >{{ user.value }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
