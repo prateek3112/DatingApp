@@ -28,10 +28,7 @@ model:any = {}
       this.router.navigateByUrl('/members');
      this.toastr.success('Welcome!','Login Successfull :)');
     },
-    error=>{
-      console.log(error);
-      this.toastr.error(error.error);
-    })
+   )
   }
 
   logout(){

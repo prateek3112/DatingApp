@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Server Error! Do not Refresh</h1>
+    <ng-container>
+        <div class="row mt-5" *ngIf="error">
+            <div class="alert alert-danger" role="alert">
+                {{error.message}}
+              </div>
+        </div>
+        <p>The stack trace is:</p>
+        <code class="mt-5 text-dark">{{error.details}}</code>
+        </ng-container>
+    <button type="submit" class="btn btn-outline-dark mt-5" routerLink='/'>Go to Home</button>
+
+</div>
