@@ -67,3 +67,4 @@ C:\Users\prate\Desktop\DatingApp\API\obj\Debug\net5.0\API.pdb
 C:\Users\prate\Desktop\DatingApp\API\obj\Debug\net5.0\API.genruntimeconfig.cache
 C:\Users\prate\Desktop\DatingApp\API\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\prate\Desktop\DatingApp\API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\prate\Desktop\DatingApp\API\bin\Debug\net5.0\CloudinaryDotNet.dll

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "L2an35udoWA82UbZzLU6cqEcgSuSeq7I2r9P4s8QS7Nrl2vcG7VnLetTt1ousgmMbuE/8tbYiR4SwXFVQSYefw==",
+  "dgSpecHash": "W0FVW5pBJnTTfmbWh/+2CXZXuGOq5j2JH/RCZ5tuOuKk/onY0ZntaE2za+Eju8GMeZ0hUrt4x8QspXN2meFYyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\prate\\Desktop\\DatingApp\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\prate\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\prate\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\prate\\.nuget\\packages\\cloudinarydotnet\\1.11.0\\cloudinarydotnet.1.11.0.nupkg.sha512",
     "C:\\Users\\prate\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\prate\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.1\\microsoft.aspnetcore.authentication.jwtbearer.5.0.1.nupkg.sha512",
     "C:\\Users\\prate\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.1\\microsoft.aspnetcore.authentication.openidconnect.5.0.1.nupkg.sha512",

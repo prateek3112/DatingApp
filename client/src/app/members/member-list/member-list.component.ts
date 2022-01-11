@@ -1,4 +1,7 @@
+import { MembersService } from './../../services/members.service';
+import { Member } from './../../models/member';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-member-list',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberListComponent implements OnInit {
 
-  constructor() { }
+  members$:Observable<Member[]>;
+
+  constructor(private memberService : MembersService) { }
 
   ngOnInit(): void {
+    this.members$ = this.memberService.getMembers();
   }
 
 }
