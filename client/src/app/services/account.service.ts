@@ -1,3 +1,4 @@
+import { MembersService } from './members.service';
 import { environment } from './../../environments/environment';
 import { User } from './../models/user';
 import { HttpClient } from '@angular/common/http';
@@ -34,6 +35,7 @@ return await this.http.post(this.baseUrl + 'account/login',model).pipe(
         
         if(user){
           this.setCurrentUser(user);
+          
         }
       })
     );

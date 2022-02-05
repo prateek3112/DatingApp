@@ -62,7 +62,9 @@
   }
   
 
-  /* body{
+  body{
     background-image: none;
-    background-color: #fff;
-  } */
+    /* background-image: url(https://images.pexels.com/photos/1040499/pexels-photo-1040499.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260); */
+    background-color: black;
+    background-size: 400vh;
+  }

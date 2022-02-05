@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
@@ -26,6 +26,8 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { TextInputComponent } from './forms/text-input/text-input.component';
+import { DateInputComponent } from './forms/date-input/date-input.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
     MemberCardComponent,
     MemberEditComponent,
     PhotoEditorComponent,
+    TextInputComponent,
+    DateInputComponent,
     
     
   ],
@@ -55,7 +59,8 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
     BrowserAnimationsModule,
     FormsModule,
     SharedModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ReactiveFormsModule
     
 
   ],
