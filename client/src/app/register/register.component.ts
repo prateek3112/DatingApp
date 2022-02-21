@@ -53,9 +53,7 @@ return (control : AbstractControl) => {
     console.log(this.registerForm.value);
     
     await (await this.accountService.register(this.registerForm.value)).subscribe(response =>{
-      this.router.navigateByUrl('/members').then(()=>{
-        this.service.getMembers();
-      })
+      this.router.navigateByUrl('/members');
     },
     error=>{
       this.validationErrors = error;

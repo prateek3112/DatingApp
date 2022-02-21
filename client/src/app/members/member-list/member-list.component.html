@@ -1,6 +1,95 @@
+<div class="tex-center" style="margin-top: -50px">
+  <h2>Your matches {{ pagination?.totalItems }}</h2>
+</div>
+
+<div class="container mt-3">
+  <form
+    #form="ngForm"
+    class="form-inline mb-3"
+    autocomplete="off"
+    (ngSubmit)="loadMembers()"
+  >
+    <div class="form-group">
+      <label>Age from: </label>
+      <input
+        type="number"
+        class="form-control form-control-sm ml-1"
+        style="width: 70px"
+        name="minAge"
+        [(ngModel)]="userParams.minAge"
+      />
+    </div>
+    <div class="form-group px-2">
+      <label>Age to: </label>
+      <input
+        type="number"
+        class="form-control form-control-sm ml-1"
+        style="width: 70px"
+        name="maxAge"
+        [(ngModel)]="userParams.maxAge"
+      />
+    </div>
+    <div class="form-group px-2">
+      <label>Show: </label>
+      <select
+        name="gender"
+        [(ngModel)]="userParams.gender"
+        style="width: 130px"
+        class="form-control form-control-sm ml-1"
+      >
+        <option *ngFor="let gender of genderList" [value]="gender.value">
+          {{ gender.display }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col ml-5">
+      <button class="btn btn-sm btn-primary" type="submit">
+        Apply Filters
+      </button>
+      <button
+        class="btn btn-sm btn-info ml-2"
+        type="submit"
+        (click)="resetFilters()"
+      >
+        Reset Filters
+      </button>
+    </div>
+<div class="col">
+  <div class="btn-group float-right">
+    <button
+    type="button"
+    style="margin-left: -230px;"
+    (click)="loadMembers()"
+      class="btn btn-sm btn-outline-light"
+      name="orderBy"
+      btnRadio = 'lastActive'
+      [(ngModel)]="userParams.orderBy"
+    >
+      Last Active
+    </button>
+    <button
+    type="button"
+    (click)="loadMembers()"
+      class="btn btn-sm btn-outline-info"
+      name="orderBy"
+      btnRadio = 'createdOn'
+      [(ngModel)]="userParams.orderBy"
+    >
+      Newest Members
+    </button>
+  </div>
+</div>
+   
+  </form>
+</div>
+
 <div class="container">
   <div class="row">
-    <div *ngFor="let member of members" class="col-sm-12 col-lg-3 col-md-6">
+    <div
+      *ngFor="let member of members"
+      class="col-sm-6 col-lg-3 col-md-6 col-12"
+    >
       <app-member-card [member]="member"></app-member-card>
     </div>
   </div>

@@ -1,4 +1,4 @@
-<div class="row" *ngIf="member">
+<div class="row" *ngIf="member"style="margin-top: -50px">
   <div class="col-4">
     <h1>Your Profile</h1>
   </div>
@@ -28,11 +28,11 @@
         </div>
         <div>
           <strong>Last seen:</strong>
-          <p>{{ member.lastActive | date: "medium" }}</p>
+          <p>{{ member.lastActive | timeago }}</p>
         </div>
         <div>
           <strong>Member since:</strong>
-          <p>{{ member.createdOn | date: "medium" }}</p>
+          <p>{{ member.createdOn | date: "dd MMM yyyy" }}</p>
         </div>
       </div>
       <div class="card-footer">

@@ -38,7 +38,6 @@ export class MemberDetailComponent implements OnInit {
 const imageUrls = [];
 
 for(const photo of this.member?.photos){
-  console.log(this.member);
   imageUrls.push({
     small : photo?.url,
     medium : photo?.url,
@@ -56,7 +55,7 @@ return imageUrls;
     
     this.memberService.getMember(this.route.snapshot.paramMap.get('username')).subscribe((member)=>{
       this.member = member;
-      console.log(member);
+     
       this.galleryImages = this.getImages();
     })
   }

@@ -21,5 +21,7 @@ namespace API.Interfaces
 
         Task<MemberDto> GetMemberAsync(string username);
 
+        Task<AppUser> GetUserByIdAsync(int id);
+
     }
 }

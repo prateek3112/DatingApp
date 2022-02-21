@@ -50,7 +50,8 @@ namespace API.Controllers
             {
                 Username = user.UserName,
                 Token = tokenService.CreateToken(user),
-                Name = user.Name
+                Name = user.Name,
+                Gender = user.Gender
             };
         }
         [HttpPost("login")]
@@ -76,7 +77,8 @@ namespace API.Controllers
                 Username = user.UserName,
                 Token = tokenService.CreateToken(user),
                 PhotoUrl = user.Photos?.FirstOrDefault(x => x.IsMain)?.Url,
-                Name = user.Name
+                Name = user.Name,
+                Gender = user.Gender
             };
         }
         private async Task<bool> UserExists(string userName)
