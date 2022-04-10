@@ -17,7 +17,7 @@ pagination : Pagination;
   constructor(private memberService: MembersService) { }
 
   ngOnInit(): void {
-    debugger
+    
 this.loadLikes();
   }
 

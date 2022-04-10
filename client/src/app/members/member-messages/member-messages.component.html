@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-body">
+        <div *ngIf="messages?.length === 0">
+            No Messages yet... Break the Ice and send a text!
+        </div>
+
+        <ul *ngIf="messages?.length > 0" class="chat">
+<li *ngFor="let message of messages" style="height: 10vh;">
+<div style="display: flex;"  [ngClass]=" currentUser == message.senderUsername ? 'float-right' : 'float-left'">
+    <span *ngIf="currentUser !== message.senderUsername">
+        <img  src="{{message.senderPhotoUrl || '../../../../../assets/user.png'}}" class="rounded-circle mr-2" alt="{{message.senderUsername}}">
+    </span>
+    <div class="chat-body">
+
+        <div class="header" [ngClass]=" currentUser == message.senderUsername ? 'float-right' : ''">
+            <small ngClass="text-muted" style="font-size: smaller;">
+                <span class="fa fa-clock-o" (click)="show()" style="cursor: pointer;" [ngClass]=" message.readAt == null ? '' : 'seen'">  {{ message.sentAt | timeago}}</span>
+                <!-- <span class="text-danger" *ngIf="!message.readAt && message.senderUsername !== username"> ( unread ) </span> -->
+                <span class="text-success" *ngIf="message.readAt && message.senderUsername !== username && showLastSeen" [ngClass]=" message.readAt == null ? '' : 'seen'"> ( seen {{message.readAt | timeago}} )   </span>
+                <span *ngIf="currentUser == message.senderUsername && showLastSeen" class="btn btn-sm btn-outline-light" (click)="deleteMessage(message.id)" style="cursor: pointer;"><i class="fa fa-trash"></i></span>
+
+            </small>
+        </div>
+        <div [ngClass]=" currentUser == message.senderUsername ? 'float-right mr-2' : ''"> {{message.content}}    </div>
+
+    </div>
+</div>
+</li>
+        </ul>
+    </div>
+    <div class="card-footer">
+        <form #messageForm="ngForm" (ngSubmit)="sendMessage()" autocomplete="off">
+            <div class="input-group">
+                <input type="text" class="form-control input-sm" name="messageContent" required [(ngModel)]="messageContent" placeholder="Send a private message">
+                <div class="input-group-append">
+                    <button [disabled] = "!messageForm.valid" class="btn btn-primary btn-sm" type="submit">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
